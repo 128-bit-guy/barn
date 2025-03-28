@@ -1,0 +1,4 @@
+CLASS net/minecraft/class_629 net/minecraft/Localizer
+	FIELD field_2705 storage Lnet/minecraft/class_300;
+	METHOD method_2049 localize (Ljava/lang/String;)Ljava/lang/String;
+	METHOD method_2050 localize (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;

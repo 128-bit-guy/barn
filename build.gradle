@@ -10,6 +10,13 @@ buildscript {
 		}
 		mavenCentral()
 	}
+//	configurations.all {
+//		resolutionStrategy.eachDependency { details ->
+//			if (details.requested.group == 'org.ow2.asm') {
+//				details.useVersion "9.5"
+//			}
+//		}
+//	}
 	dependencies {
 		classpath "cuchaz:enigma-cli:${project.enigma_version}"
 		classpath "babric:stitch:${project.stitch_version}"
@@ -283,7 +290,7 @@ task tinyJar(type: Jar, dependsOn: mergeTiny) {
 	outputs.upToDateWhen { false }
 	archiveFileName = "barn-${yarnVersion}.jar"
 	destinationDirectory.set(file("build/libs"))
-	classifier = ""
+//	classifier = ""
 	from(mergeTiny.output) {
 		rename { "mappings/mappings.tiny" }
 	}
